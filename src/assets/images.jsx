@@ -7,6 +7,7 @@ import googleIco from "./login/google.svg";
 import dashboardIco from "./dashboard/dashboard.svg";
 import subDoneIco from "./dashboard/user.svg";
 import noSubIco from "./dashboard/userx.svg";
+import profile_pic from "./pp.png"
 
 const webIcons = {
   logo: logo,
@@ -17,6 +18,7 @@ const webIcons = {
   dashboardIco: dashboardIco,
   subDoneIco: subDoneIco,
   noSubIco: noSubIco,
+  profilePic: profile_pic
 };
 
 export default webIcons;
