@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/login/Login";
+import ForgotPass from "./pages/Auth/ForgotPass";
 
 export const router = createBrowserRouter([
   {
@@ -17,4 +18,8 @@ export const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/fotgotPassword",
+    element: <ForgotPass />
+  }
 ]);

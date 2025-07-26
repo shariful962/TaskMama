@@ -41,8 +41,8 @@ const Login = () => {
               <input
                 id="email"
                 type="email"
-                placeholder="Your email"
-                className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded w-full focus:outline-none"
+                placeholder="Enter your email"
+                className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
               />
             </div>
           </div>
@@ -62,19 +62,28 @@ const Login = () => {
               <input
                 id="password"
                 type={showPass ? "text" : "password"}
-                placeholder="Your password"
-                className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded w-full focus:outline-none"
+                placeholder="Enter password"
+                className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
               />
             </div>
+              <div className="text-right">
+                <button
+                  type="button"
+                  onClick={() => navigate("/fotgotPassword")}
+                  className="text-[#3093FC] text-sm hover:underline"
+                >
+                  Forget Password
+                </button>
+              </div>
           </div>
 
-          <button onClick={handleLogin} className="bg-[#B0A2DA] text-white py-3 text-lg rounded font-bold hover:bg-[#9a8dd1] transition-all duration-300 cursor-pointer mb-4">
+          <button onClick={handleLogin} className="bg-[#B0A2DA] text-white py-3 text-lg rounded-[10px] font-bold hover:bg-[#9a8dd1] transition-all duration-300 cursor-pointer mb-4">
             Log in
           </button>
 
           <p className="text-center text-sm text-gray-500 mb-4">or</p>
 
-          <button className="relative border flex items-center justify-center gap-3  py-3 rounded font-semibold bg-[#353535]">
+          <button className="relative border flex items-center justify-center gap-3  py-3 rounded-[10px] font-semibold bg-[#353535]">
             <img src={webIcons.googleIco} alt="google ico" className="w-6" />
             <p className="text-white text-lg">Log in with Google account</p>
           </button>
