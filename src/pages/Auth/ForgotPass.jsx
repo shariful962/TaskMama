@@ -29,9 +29,7 @@ const Login = () => {
       >
         <img src={webIcons.logo} alt="logo" className="w-[135px]" />
       </button>
-      {/* <ForgotPassword ></ForgotPassword> */}
-      {/* <UpdatePassword></UpdatePassword> */}
-      {/* <VerifyCode></VerifyCode> */}
+     
 
     </div>
 

@@ -1,31 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import { Outlet, useLocation } from "react-router-dom";
-// import Sidebar from "./components/Sidebar/Sidebar.jsx";
-
-// function RootLayout() {
-//   const location = useLocation();
-//   const noSidebarRoutes = ["/login", "/signin"];
-//   const showSidebar = !noSidebarRoutes.includes(
-//     location.pathname.toLowerCase()
-//   );
-
-//   return (
-//     <div
-//       style={{
-//         backgroundColor: "var(--bg-color)",
-//         color: "var(--text-color)",
-//       }}
-//       className="fixed flex h-screen w-full font-inter"
-//     >
-//       {showSidebar && <Sidebar selected={"Dashboard"} />}
-//       <main className={`w-full ${showSidebar ? "20px" : "0"}`}>
-//         <Outlet />
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default RootLayout;
 
 import React, { useContext, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
