@@ -7,11 +7,14 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("")
+  const[password, setPassword] = useState("")
   const [showPass, setShowPass] = useState(false);
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
     // Handle login logic here  
-    console.log("Login button clicked");
+    e.preventDefault()
+    console.log("Login button clicked",email,password);
     navigate("/dashboard");
   }
 
@@ -41,6 +44,8 @@ const Login = () => {
               <input
                 id="email"
                 type="email"
+                value={email}
+                onChange={(e)=> setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
               />
@@ -62,6 +67,8 @@ const Login = () => {
               <input
                 id="password"
                 type={showPass ? "text" : "password"}
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
                 placeholder="Enter password"
                 className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
               />

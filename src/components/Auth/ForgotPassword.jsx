@@ -24,13 +24,13 @@ const ForgotPassword = () => {
               <input 
                 type="email"
                 placeholder="Enter your email"
-                className=" outline-none flex-1 text-gray-800"
+                className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
 
-          <button type="submit" className="submit_btn">
+          <button type="submit" className="w-full bg-[#B0A2DA] text-white py-3 text-lg rounded-[10px] font-bold hover:bg-[#9a8dd1] transition-all duration-300 cursor-pointer mt-4">
             Reset Password
           </button>
         </form>

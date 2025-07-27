@@ -5,10 +5,11 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import webIcons from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import ForgotPassword from "../../components/Auth/ForgotPassword";
+import UpdatePassword from "../../components/Auth/UpdatePassword";
+import VerifyCode from "../../components/Auth/VerifyCode";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [showPass, setShowPass] = useState(false);
 
   const handleLogin = () => {
     // Handle login logic here  
@@ -28,7 +29,10 @@ const Login = () => {
       >
         <img src={webIcons.logo} alt="logo" className="w-[135px]" />
       </button>
-      <ForgotPassword ></ForgotPassword>
+      {/* <ForgotPassword ></ForgotPassword> */}
+      {/* <UpdatePassword></UpdatePassword> */}
+      {/* <VerifyCode></VerifyCode> */}
+
     </div>
 
       {/* Form side */}
