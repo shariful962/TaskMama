@@ -106,7 +106,7 @@ const Dashboard = () => {
         </div>
 
         {/* subscribers info */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[5rem] ">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[5rem] ">
           <div className={subscriptionCardClass} >
             <h3 className={`${subscriptionHeadingClass} ${theme === 'light'? "text-[var(--sub-text-color)]": "text-gray-300"} `}>Total Subscribers</h3>
             <div>
@@ -131,7 +131,7 @@ const Dashboard = () => {
         </div>
 
         {/* manage user */}
-        <div className="mt-10.5 flex flex-col gap-6">
+        <div className="mt-0 md:mt-10.5 flex flex-col gap-3  md:gap-6">
           <h2 className={`text-lg md:text-2xl lg:text-[1.75rem] font-semibold ${blackWhiteText}`}>
             Manage User
           </h2>
@@ -151,7 +151,7 @@ const Dashboard = () => {
             />
           </div>
 
-          <div className="h-[500px] flex flex-col gap-5 overflow-y-scroll">
+          <div className="h-[400px] flex flex-col gap-5 overflow-y-scroll">
             {filteredUsers.map((user, index) => (
               <div
                 key={index}
@@ -193,7 +193,7 @@ const Dashboard = () => {
                   </button>
                   <button
                     className={`
-                      w-[9rem] md:w-[10rem] text-balance text-sm px-5 py-3 rounded-full text-white whitespace-nowrap cursor-pointer
+                      w-[8rem] md:w-[10rem] text-balance text-sm px-5 py-3 cursor-not-allowed rounded-full text-white flex items-center justify-center whitespace-nowrap 
                       ${
                         user.sub
                           ? "bg-[var(--main-component-color)]"

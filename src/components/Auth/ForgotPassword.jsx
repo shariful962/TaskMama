@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 
-const ForgotPassword = () => {
+const ForgotPassword = ({email,setEmail,onSubmit}) => {
   
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
 
   return (
     <div>
@@ -23,6 +23,7 @@ const ForgotPassword = () => {
             <div className="form-control my-2">
               <input 
                 type="email"
+                value={email}
                 placeholder="Enter your email"
                 className="bg-[#F3F3F3] border border-[#00000030] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] pl-4 pr-10 py-3 rounded-[10px] w-full focus:outline-none"
                 onChange={(e) => setEmail(e.target.value)}
@@ -30,7 +31,7 @@ const ForgotPassword = () => {
             </div>
           </div>
 
-          <button type="submit" className="w-full bg-[#B0A2DA] text-white py-3 text-lg rounded-[10px] font-bold hover:bg-[#9a8dd1] transition-all duration-300 cursor-pointer mt-4">
+          <button type="submit" onClick={onSubmit} className="w-full bg-[#B0A2DA] text-white py-3 text-lg rounded-[10px] font-bold hover:bg-[#9a8dd1] transition-all duration-300 cursor-pointer mt-4">
             Reset Password
           </button>
         </form>

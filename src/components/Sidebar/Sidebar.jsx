@@ -43,8 +43,8 @@ const Sidebar = ({isOpen,toggleSidebar}) => {
 
   return (
     // <div className="w-2xs border-r border-gray-200 flex flex-col justify-between h-screen">
-     <div className={`fixed sm:static top-0 left-0  w-2xs ${theme === 'light'? 'bg-white' : 'bg-black'} z-50 shadow-md transition-transform duration-300 ${isOpen? 'translate-x-0' : '-translate-x-full'} border-r border-gray-200 flex flex-col justify-between h-screen`}>
-      <div className="p-10 w-[280px]">
+     <div className={`fixed sm:static top-0 left-0  w-2xs ${theme === 'light'? 'bg-white' : 'bg-black'} z-50 shadow-md transition-transform duration-300 ${isOpen? 'translate-x-0' : '-translate-x-full'} border-r border-gray-200 flex flex-col justify-between min-h-screen`}>
+      <div className="p-10 w-[280px] mt-4 md:mt-0">
         <img src={webIcons.logo} alt="" />
         <div className="flex flex-col gap-5 mt-10">
           {navMenu.map((menu) => (
@@ -55,7 +55,7 @@ const Sidebar = ({isOpen,toggleSidebar}) => {
         </div>
       </div>
        {/* Bottom: User Profile + Logout */}
-      <div className="p-6  border-gray-200 relative">
+      <div className="  p-6  border-gray-200 relative">
         <div className="flex items-center gap-4 mb-4 relative">
           <img
             src={profileImage}
@@ -70,7 +70,7 @@ const Sidebar = ({isOpen,toggleSidebar}) => {
         </div>
         <button
           onClick={handleLogout}
-          className="w-full text-sm font-semibold text-[#B0A2DA] py-2 rounded-lg border border-[#B0A2DA] hover:bg-[#B0A2DA] hover:text-white transition-colors duration-300 cursor-pointer"
+          className="w-full mb-8 md:mb-0 text-sm font-semibold text-[#B0A2DA] py-2 rounded-lg border border-[#B0A2DA] hover:bg-[#B0A2DA] hover:text-white transition-colors duration-300 cursor-pointer"
         >
           Logout
         </button>

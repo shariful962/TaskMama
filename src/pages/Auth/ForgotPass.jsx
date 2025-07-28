@@ -8,13 +8,23 @@ import ForgotPassword from "../../components/Auth/ForgotPassword";
 import UpdatePassword from "../../components/Auth/UpdatePassword";
 import VerifyCode from "../../components/Auth/VerifyCode";
 
-const Login = () => {
+const ForgotPass = ({initialStep, initialEmail, ckOtpVerify}) => {
+   const [step, setStep] = useState(initialStep || "email");
+  const [email, setEmail] = useState(initialEmail || "");
+  const [Otp, setOtp] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Handle login logic here  
-    console.log("Login button clicked");
-    navigate("/dashboard");
+  const  handleSendEmail = ()=>{
+    setStep('verify')
+  }
+
+  const handleOTP = ()=>{
+    setStep('reset')
+  }
+
+  const handleSetPassword = ()=>{
+    navigate("/login");
   }
 
   return (
@@ -29,12 +39,36 @@ const Login = () => {
       >
         <img src={webIcons.logo} alt="logo" className="w-[135px]" />
       </button>
-     
+    
+         {/* Functions */}
+        {step === "email" && (
+          <ForgotPassword
+            email={email}
+            setEmail={setEmail}
+            onSubmit={handleSendEmail}
+          />
+        )}
 
+        {step === "verify" && (
+          <VerifyCode
+            email={email}
+            otp={Otp}
+            setOtp={setOtp}
+            onSubmit={handleOTP}
+          />
+        )}
+
+          {step === "reset" && (
+          <UpdatePassword
+            newPassword={newPassword}
+            setNewPassword={setNewPassword}
+            onSubmit={handleSetPassword}
+          />
+        )}
     </div>
 
-      {/* Form side */}
-     
+      
+    
 
       {/* Image side */}
       <div className="w-full md:w-1/2 hidden lg:flex items-center justify-center bg-[var(--main-component-color)]">
@@ -48,4 +82,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPass;
